@@ -5,141 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller NIVA - Cognitio Tech Lab</title>
     <style>
-        /* Paleta de colores basada en tus cápsulas */
-        :root {
-            --bg: #0e1824;
-            --card: #16253a;
-            --ink: #e6edf5;
-            --mut: #9fb0c4;
-            --cyan: #5cc3de;
-            --border: #3a5069;
-        }
-
+        :root { --bg: #0e1824; --card: #16253a; --ink: #e6edf5; --mut: #9fb0c4; --cyan: #5cc3de; --border: #3a5069; }
         * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            padding: 40px 20px;
-            background-color: var(--bg);
-            color: var(--ink);
-            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            max-width: 800px;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: var(--cyan);
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-        }
-
-        p.subtitle {
-            font-size: 18px;
-            color: var(--mut);
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        /* Grilla de tarjetas */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            width: 100%;
-            max-width: 1100px;
-        }
-
-        /* Estilo de cada tarjeta */
-        .card {
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
-            color: var(--ink);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--cyan);
-            box-shadow: 0 10px 20px rgba(92, 195, 222, 0.15);
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: rgba(92, 195, 222, 0.1);
-            color: var(--cyan);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .card h2 {
-            margin: 0 0 10px 0;
-            font-size: 22px;
-            color: var(--ink);
-        }
-
-        .card p {
-            margin: 0 0 20px 0;
-            font-size: 14px;
-            color: var(--mut);
-            line-height: 1.5;
-            flex-grow: 1;
-        }
-
-        .icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            text-align: center;
-            padding: 10px 15px;
-            background-color: transparent;
-            color: var(--cyan);
-            border: 1px solid var(--cyan);
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover .btn {
-            background-color: var(--cyan);
-            color: var(--bg);
-        }
-
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            color: var(--mut);
-            font-size: 13px;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            width: 100%;
-            max-width: 1100px;
-        }
+        body { margin: 0; padding: 40px 20px; background-color: var(--bg); color: var(--ink); font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        header { text-align: center; margin-bottom: 50px; max-width: 800px; }
+        h1 { font-size: 36px; color: var(--cyan); margin: 0 0 15px 0; line-height: 1.2; }
+        p.subtitle { font-size: 18px; color: var(--mut); margin: 0; line-height: 1.5; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; width: 100%; max-width: 1100px; }
+        .card { background-color: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: var(--ink); transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-5px); border-color: var(--cyan); box-shadow: 0 10px 20px rgba(92, 195, 222, 0.15); }
+        .badge { display: inline-block; background-color: rgba(92, 195, 222, 0.1); color: var(--cyan); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card h2 { margin: 0 0 10px 0; font-size: 22px; color: var(--ink); }
+        .card p { margin: 0 0 20px 0; font-size: 14px; color: var(--mut); line-height: 1.5; flex-grow: 1; }
+        .icon { font-size: 32px; margin-bottom: 15px; }
+        .btn { display: inline-block; text-align: center; padding: 10px 15px; background-color: transparent; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 8px; font-weight: 600; font-size: 14px; transition: all 0.3s ease; }
+        .card:hover .btn { background-color: var(--cyan); color: var(--bg); }
+        footer { margin-top: 60px; text-align: center; color: var(--mut); font-size: 13px; border-top: 1px solid var(--border); padding-top: 20px; width: 100%; max-width: 1100px; }
     </style>
 </head>
 <body>
@@ -151,7 +32,7 @@
 
     <div class="grid">
         <!-- Cápsula 1 -->
-        <a href="capsula1_infografia.jpg" target="_blank" class="card">
+        <a href="Capsula1-Infografia.jpg" target="_blank" class="card">
             <div>
                 <div class="icon">🖼️</div>
                 <span class="badge">Módulo 2</span>
@@ -162,7 +43,7 @@
         </a>
 
         <!-- Cápsula 2 -->
-        <a href="capsula2_presentacion.html" target="_blank" class="card">
+        <a href="Capsula2-Gobernanza.html" target="_blank" class="card">
             <div>
                 <div class="icon">📊</div>
                 <span class="badge">Módulo 4</span>
@@ -173,7 +54,7 @@
         </a>
 
         <!-- Cápsula 3 -->
-        <a href="capsula3_mapa.html" target="_blank" class="card">
+        <a href="Capsula3-Mapa-Interactivo.html" target="_blank" class="card">
             <div>
                 <div class="icon">🗺️</div>
                 <span class="badge">Módulo 2</span>
@@ -184,7 +65,7 @@
         </a>
 
         <!-- Cápsula 4 -->
-        <a href="capsula4_cuadernos.pdf" target="_blank" class="card">
+        <a href="Capsula4-Cuadernos-Digitales.pdf" target="_blank" class="card">
             <div>
                 <div class="icon">📄</div>
                 <span class="badge">Módulo 3</span>
@@ -195,7 +76,7 @@
         </a>
 
         <!-- Cápsula 5 -->
-        <a href="capsula5_podcast.html" target="_blank" class="card">
+        <a href="Capsula5-Podcast.html" target="_blank" class="card">
             <div>
                 <div class="icon">🎧</div>
                 <span class="badge">Módulo 1</span>
