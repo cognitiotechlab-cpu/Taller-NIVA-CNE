@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gobernanza de IA - NIVA</title>
     <style>
-        /* Estilos para que coincida con la estética de tus otras cápsulas */
-        body {
+        /* Reseteamos márgenes y bloqueamos el scroll de la página principal */
+        html, body {
             margin: 0;
             padding: 0;
-            background-color: #0e1824; /* Fondo azul oscuro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: system-ui, -apple-system, sans-serif;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Esto evita la barra de scroll externa */
+            background-color: #0e1824; /* Fondo oscuro acorde a tu diseño */
         }
-        .iframe-container {
-            width: 95%;
-            max-width: 1400px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); /* Brillo cian sutil */
+
+        /* Forzamos al iframe a ocupar exactamente el 100% de la ventana */
+        iframe {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="iframe-container">
-        <!-- Acá va el código que copiaste de Genially -->
-        <div style="width: 100%;">
-            <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
-                <iframe title="Gobernanza de IA: Guía NIVA para Ingenieros Nucleares" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/6acd38e29ffe85fa446396c9" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-            </div>
-        </div>
-    </div>
+    <!-- Pegamos tu código de Genially pero simplificando los divs que lo envuelven -->
+    <iframe 
+        title="Gobernanza de IA: Guía NIVA para Ingenieros Nucleares" 
+        src="https://view.genially.com/6acd38e29ffe85fa446396c9" 
+        allowscriptaccess="always" 
+        allowfullscreen="true" 
+        scrolling="yes" 
+        allownetworking="all">
+    </iframe>
 
 </body>
 </html>
